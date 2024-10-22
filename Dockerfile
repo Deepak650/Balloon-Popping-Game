@@ -1,23 +1,17 @@
-# Use an official Node.js runtime as a parent image
-FROM node:latest
+# Use an official Nginx image as the base
+FROM nginx:alpine
 
-# Set the working directory in the container
-WORKDIR /usr/src/app
+# Set the working directory inside the container
+WORKDIR /usr/share/nginx/html
 
-# Copy the package.json and package-lock.json files to the container
-COPY package*.json ./
+# Remove the default Nginx website
+RUN rm -rf ./*
 
-# Install project dependencies
-RUN npm install
-
-# If you're building production, you can use:
-# RUN npm ci --only=production
-
-# Copy the rest of the application files to the container
+# Copy the HTML, JS, and other static files into the container
 COPY . .
 
-# Expose the application port (if your app runs on port 3000)
-EXPOSE 8080
+# Expose port 80 to make the web app accessible
+EXPOSE 80
 
-# Define the command to start your application
-CMD ["npm", "start"]
+# Start Nginx when the container starts
+CMD ["nginx", "-g", "daemon off;"]
