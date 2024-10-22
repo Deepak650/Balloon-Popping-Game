@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Ballonapp
+  labels:
+    app: Ballonapp
+spec:
+  replicas: 2  # Number of pod replicas
+  selector:
+    matchLabels:
+      app: Ballonapp
+  template:
+    metadata:
+      labels:
+        app: Ballonapp
+    spec:
+    containers:
+          - name: Ballonappcontainer
+            image: your-docker-image:latest  # Replace with your Docker image
+            ports:
+            - containerPort: 80  # Port that your HTML/JS app serves on
