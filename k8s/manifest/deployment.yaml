@@ -5,17 +5,17 @@ metadata:
   labels:
     app: ballonapp
 spec:
-  replicas: 2  # Number of pod replicas
+  replicas: 3
   selector:
     matchLabels:
       app: ballonapp
   template:
     metadata:
       labels:
-        app: ballonapp
+       app: ballonapp
     spec:
     containers:
           - name: Ballonappcontainer
-            image: balloncontainer.azurecr.io/:latest  # Replace with your Docker image
+            image: balloncontainer.azurecr.io/:latest
             ports:
-            - containerPort: 80  # Port that your HTML/JS app serves on
+            - containerPort: 80
