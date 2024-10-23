@@ -13,7 +13,7 @@ spec:
     metadata:
       labels:
         app: Ballonapp
-    spec:
+  spec:
     containers:
           - name: Ballonappcontainer
             image: balloncontainer.azurecr.io/balloonpoppinggame:latest  # Replace with your Docker image
