@@ -5,7 +5,7 @@
     labels:
       app: Ballonapp
   spec:
-    replicas: 2  # Number of pod replicas
+    replicas: 2
     selector:
       matchLabels:
         app: Ballonapp
@@ -17,6 +17,6 @@
     spec:
         containers:
               - name: Ballonappcontainer
-                image: balloncontainer.azurecr.io/balloonpoppinggame:latest  # Replace with your Docker image
+                image: balloncontainer.azurecr.io/balloonpoppinggame:latest
                 ports:
-                - containerPort: 80  # Port that your HTML/JS app serves on
+                - containerPort: 80
