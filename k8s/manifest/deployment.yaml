@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: Ballonapp
+  name: ballonapp
   labels:
-    app: Ballonapp
+    app: ballonapp
 spec:
   replicas: 2  # Number of pod replicas
   selector:
     matchLabels:
-      app: Ballonapp
+      app: ballonapp
   template:
     metadata:
       labels:
-        app: Ballonapp
+        app: ballonapp
     spec:
     containers:
           - name: Ballonappcontainer
