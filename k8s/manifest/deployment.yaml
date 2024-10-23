@@ -12,10 +12,10 @@ spec:
   template:
     metadata:
       labels:
-       app: ballonapp
+        app: ballonapp
     spec:
-    containers:
-          - name: Ballonappcontainer
-            image: balloncontainer.azurecr.io/:latest
-            ports:
+      containers:
+        - name: Ballonappcontainer
+          image: balloncontainer.azurecr.io/:latest
+           ports:
             - containerPort: 80
