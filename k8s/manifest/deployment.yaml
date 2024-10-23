@@ -16,6 +16,6 @@ spec:
     spec:
     containers:
           - name: Ballonappcontainer
-            image: your-docker-image:latest  # Replace with your Docker image
+            image: balloncontainer.azurecr.io/:latest  # Replace with your Docker image
             ports:
             - containerPort: 80  # Port that your HTML/JS app serves on
