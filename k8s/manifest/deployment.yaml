@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: ballonappcontainer
-          image: balloncontainer.azurecr.io/:latest
+          image: balloncontainer.azurecr.io/balloonpoppinggame:latest
           ports:  # Correct indentation here
             - containerPort: 80
