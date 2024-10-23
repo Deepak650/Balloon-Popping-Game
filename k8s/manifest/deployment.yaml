@@ -17,5 +17,6 @@ spec:
       containers:
         - name: ballonappcontainer
           image: balloncontainer.azurecr.io/balloonpoppinggame:latest
+          imagePullPolicy: Always
           ports:  # Correct indentation here
             - containerPort: 80
